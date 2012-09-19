@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="hello">Hello World, DemoApkInstallActivity!</string>
+    <string name="app_name">一键安装</string>
+    <string name="run">正在运行</string>
+    <string name="btnytext">一键安装</string>
+    <string name="btnytextquit">离开</string>
+    <string name="btnymore">更多精彩</string>
+    <string name="nosdcard">请插入SD卡</string>
+    <string name="nofile">SD卡中没有ApkInstall文件夹</string>
+    <string name="alreadyinstall">全部安装完毕</string>
+    <string name="noenoughmemory">内存不足，请清理</string>
+    <string name="installapk">正在安装...</string>
+    <string name="nogoback">请不要关闭当前应用</string>
+    <string name="strAll">全选</string>
+    <string name="wait">正在载入</string>
+    <string name="noApk">本地无可安装的应用</string>
+</resources>

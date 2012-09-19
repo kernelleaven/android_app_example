@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btnytext" android:layout_weight="1.0" android:onClick="clickHandler" />
+        <Button android:id="@id/btAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strAll" android:onClick="clickHandler" />
+    </LinearLayout>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="100" style="\?android:attr/progressBarStyleHorizontal" />
+    <TextView android:id="@id/progresstext" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Button android:id="@id/btn2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/btnymore" android:onClick="clickHandler" />
+</LinearLayout>

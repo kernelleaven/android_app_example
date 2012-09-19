@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <item type="id" name="btn">false</item>
+    <item type="id" name="btAll">false</item>
+    <item type="id" name="progress">false</item>
+    <item type="id" name="progresstext">false</item>
+    <item type="id" name="btn2">false</item>
+    <item type="id" name="pic">false</item>
+    <item type="id" name="label">false</item>
+    <item type="id" name="check">false</item>
+</resources>
