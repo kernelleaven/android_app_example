@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  >
+  <TextView android:id="@+id/btDevLbl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/bt_dev_lbl"
+    android:paddingLeft="5px"
+    android:paddingRight="5px"
+    android:paddingTop="5px"
+    android:paddingBottom="5px"/>
+  <EditText
+    android:id="@+id/btDevEditText"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:editable="false"
+    android:clickable="false"
+    android:cursorVisible="false"
+    android:focusable="false"
+    android:linksClickable="false"
+    android:soundEffectsEnabled="false"
+    android:drawableRight="@drawable/btsearch"
+    android:drawablePadding="6px"/>
+  <TextView android:id="@+id/btDevPressLbl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/bt_dev_press_lbl"
+    android:paddingLeft="5px"
+    android:paddingRight="5px"
+    android:paddingTop="5px"
+    android:paddingBottom="20px"/>
+</LinearLayout>

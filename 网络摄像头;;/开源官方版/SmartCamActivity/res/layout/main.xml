@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+  <SurfaceView android:id="@+id/preview_view"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:layout_centerInParent="true"/>
+
+
+<!-- 
+  <com.admob.android.ads.AdView
+           android:id="@+id/ad"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           myapp:backgroundColor="#00FF00"
+           myapp:primaryTextColor="#FFFFFF"
+           myapp:secondaryTextColor="#CCCCCC"/>
+-->
+<!-- 
+	<TextView  
+		android:id="@+id/nativeTextView"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" />
+	<Button android:id="@+id/connectBtn"
+		android:text="@string/disconnect"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<Button android:id="@+id/disconnectBtn"
+		android:text="@string/disconnect"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />-->
+</FrameLayout>

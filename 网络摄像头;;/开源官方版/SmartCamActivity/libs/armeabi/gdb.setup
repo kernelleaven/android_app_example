@@ -1,0 +1,4 @@
+set solib-search-path /cygdrive/c/work/Android/SmartCamAndroid/obj/local/armeabi
+directory /cygdrive/c/android-sdk-windows/android-ndk-r4b/build/platforms/android-8/arch-arm/usr/include
+directory /cygdrive/c/work/Android/SmartCamAndroid/jni/jpeg
+directory /cygdrive/c/work/Android/SmartCamAndroid/jni/jpeg
