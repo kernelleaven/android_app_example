@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.iflytek.udp"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".AndroidUDPClient"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
+            </intent-filter>
+        </activity>
+	<service android:name="com.iflytek.udp.Receive" android:enabled="true"
+	    android:process="com.iflytek.udp.Receive"></service>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+   	<uses-permission  android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+</manifest>
