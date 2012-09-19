@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.android.colorset.MyImage
+    android:id="@+id/MyImage"
+    android:layout_width="400dp"
+    android:layout_height="200dp"
+    />
+ 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="200dp"
+    android:orientation="vertical" >
+	    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="260dp"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal" >
+	        <EditText android:id="@+id/indexa"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa1"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa2"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa3"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa4"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	    
+	    </LinearLayout>
+	    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="260dp"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal" >
+	    	<EditText android:id="@+id/indexa5"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa6"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa7"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa8"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa9"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	    </LinearLayout>
+	    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="260dp"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal" >
+	        <EditText android:id="@+id/indexa10"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa11"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa12"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa13"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa14"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	    
+	    </LinearLayout>
+	    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="260dp"
+	    android:layout_height="50dp"
+	    android:orientation="horizontal" >
+	        <EditText android:id="@+id/indexa15"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa16"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa17"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa18"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	        <EditText android:id="@+id/indexa19"
+	            android:layout_width="50dp"
+	    		android:layout_height="50dp"/>
+	    
+	    </LinearLayout>
+    </LinearLayout>
+
+    <Button 
+        android:id="@+id/set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="set"></Button>"
+
+</LinearLayout>
