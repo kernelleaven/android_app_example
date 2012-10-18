@@ -1,11 +1,11 @@
-ÊµÏÖÔ²½ÇµÄ·½·¨£¬´Ë·½·¨¿ÉÒÔ½«Ò»¸öÎ»Í¼¸Ä±äÎªÒ»¸öÔ²½ÇÎ»Í¼£º
+ï»¿å®ç°åœ†è§’çš„æ–¹æ³•ï¼Œæ­¤æ–¹æ³•å¯ä»¥å°†ä¸€ä¸ªä½å›¾æ”¹å˜ä¸ºä¸€ä¸ªåœ†è§’ä½å›¾ï¼š
 [java] view plaincopy
 
     /** 
-     * »ñÈ¡Ô²½ÇÎ»Í¼µÄ·½·¨ 
-     * @param bitmap ĞèÒª×ª»¯³ÉÔ²½ÇµÄÎ»Í¼ 
-     * @param pixels Ô²½ÇµÄ¶ÈÊı£¬ÊıÖµÔ½´ó£¬Ô²½ÇÔ½´ó 
-     * @return ´¦ÀíºóµÄÔ²½ÇÎ»Í¼ 
+     * è·å–åœ†è§’ä½å›¾çš„æ–¹æ³• 
+     * @param bitmap éœ€è¦è½¬åŒ–æˆåœ†è§’çš„ä½å›¾ 
+     * @param pixels åœ†è§’çš„åº¦æ•°ï¼Œæ•°å€¼è¶Šå¤§ï¼Œåœ†è§’è¶Šå¤§ 
+     * @return å¤„ç†åçš„åœ†è§’ä½å›¾ 
      */  
     public static Bitmap toRoundCorner(Bitmap bitmap, int pixels) {  
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),  
@@ -26,9 +26,9 @@
     }  
 
 
-ÏÂÃæ¾Í²âÊÔÒ»ÏÂÕâ¸ö·½·¨£¬½«Ò»¸öActivityµÄ±³¾°Í¼ÉèÖÃÎªÔ²½Ç£¬¼´½«ActivityµÄLinerLayoutµÄ±³¾°ÉèÖÃÎªÔ²½Ç£º
+ä¸‹é¢å°±æµ‹è¯•ä¸€ä¸‹è¿™ä¸ªæ–¹æ³•ï¼Œå°†ä¸€ä¸ªActivityçš„èƒŒæ™¯å›¾è®¾ç½®ä¸ºåœ†è§’ï¼Œå³å°†Activityçš„LinerLayoutçš„èƒŒæ™¯è®¾ç½®ä¸ºåœ†è§’ï¼š
 
-ÅäÖÃÎÄ¼ş main.xml£º
+é…ç½®æ–‡ä»¶ main.xmlï¼š
 [html] view plaincopy
 
     <?xml version="1.0" encoding="utf-8"?>  
@@ -40,7 +40,7 @@
       
     </LinearLayout>  
 
-Java´úÂë£º
+Javaä»£ç ï¼š
 [java] view plaincopy
 
     import android.app.Activity;  
@@ -58,7 +58,7 @@ Java´úÂë£º
     import android.widget.LinearLayout;  
       
     /** 
-     * ½«ActivityµÄ±³¾°Í¼ÉèÖÃÎªÔ²½ÇÍ¼ 
+     * å°†Activityçš„èƒŒæ™¯å›¾è®¾ç½®ä¸ºåœ†è§’å›¾ 
      */  
     public class AndroidTestActivity extends Activity {  
           
@@ -83,10 +83,10 @@ Java´úÂë£º
         }  
       
         /** 
-         * »ñÈ¡Ô²½ÇÎ»Í¼µÄ·½·¨ 
-         * @param bitmap ĞèÒª×ª»¯³ÉÔ²½ÇµÄÎ»Í¼ 
-         * @param pixels Ô²½ÇµÄ¶ÈÊı£¬ÊıÖµÔ½´ó£¬Ô²½ÇÔ½´ó 
-         * @return ´¦ÀíºóµÄÔ²½ÇÎ»Í¼ 
+         * è·å–åœ†è§’ä½å›¾çš„æ–¹æ³• 
+         * @param bitmap éœ€è¦è½¬åŒ–æˆåœ†è§’çš„ä½å›¾ 
+         * @param pixels åœ†è§’çš„åº¦æ•°ï¼Œæ•°å€¼è¶Šå¤§ï¼Œåœ†è§’è¶Šå¤§ 
+         * @return å¤„ç†åçš„åœ†è§’ä½å›¾ 
          */  
         public static Bitmap toRoundCorner(Bitmap bitmap, int pixels) {  
             Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),  
