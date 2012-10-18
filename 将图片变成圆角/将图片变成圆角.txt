@@ -1,0 +1,109 @@
+实现圆角的方法，此方法可以将一个位图改变为一个圆角位图：
+[java] view plaincopy
+
+    /** 
+     * 获取圆角位图的方法 
+     * @param bitmap 需要转化成圆角的位图 
+     * @param pixels 圆角的度数，数值越大，圆角越大 
+     * @return 处理后的圆角位图 
+     */  
+    public static Bitmap toRoundCorner(Bitmap bitmap, int pixels) {  
+        Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),  
+                bitmap.getHeight(), Config.ARGB_8888);  
+        Canvas canvas = new Canvas(output);  
+        final int color = 0xff424242;  
+        final Paint paint = new Paint();  
+        final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());  
+        final RectF rectF = new RectF(rect);  
+        final float roundPx = pixels;  
+        paint.setAntiAlias(true);  
+        canvas.drawARGB(0, 0, 0, 0);  
+        paint.setColor(color);  
+        canvas.drawRoundRect(rectF, roundPx, roundPx, paint);  
+        paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));  
+        canvas.drawBitmap(bitmap, rect, rect, paint);  
+        return output;  
+    }  
+
+
+下面就测试一下这个方法，将一个Activity的背景图设置为圆角，即将Activity的LinerLayout的背景设置为圆角：
+
+配置文件 main.xml：
+[html] view plaincopy
+
+    <?xml version="1.0" encoding="utf-8"?>  
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+        android:id="@+id/layout"  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent"  
+        android:orientation="vertical" >  
+      
+    </LinearLayout>  
+
+Java代码：
+[java] view plaincopy
+
+    import android.app.Activity;  
+    import android.graphics.Bitmap;  
+    import android.graphics.Bitmap.Config;  
+    import android.graphics.Canvas;  
+    import android.graphics.Paint;  
+    import android.graphics.PorterDuff.Mode;  
+    import android.graphics.PorterDuffXfermode;  
+    import android.graphics.Rect;  
+    import android.graphics.RectF;  
+    import android.graphics.drawable.BitmapDrawable;  
+    import android.graphics.drawable.Drawable;  
+    import android.os.Bundle;  
+    import android.widget.LinearLayout;  
+      
+    /** 
+     * 将Activity的背景图设置为圆角图 
+     */  
+    public class AndroidTestActivity extends Activity {  
+          
+        /** Called when the activity is first created. */  
+        @Override  
+        public void onCreate(Bundle savedInstanceState) {  
+            super.onCreate(savedInstanceState);  
+            setContentView(R.layout.main);  
+      
+            // Drawable drawable = getResources().getDrawable(R.drawable.bg);  
+            // BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;  
+            // Bitmap bitmap = bitmapDrawable.getBitmap();  
+            LinearLayout layout = (LinearLayout) findViewById(R.id.layout);  
+            Drawable drawable = getResources().getDrawable(R.drawable.yexuan);  
+            BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;  
+            Bitmap bitmap = bitmapDrawable.getBitmap();  
+            BitmapDrawable bbb = new BitmapDrawable(toRoundCorner(bitmap, 30));  
+            layout.setBackgroundDrawable(bbb);  
+            // ImageView imageView = (ImageView) findViewById(R.id.imgShow);  
+            // imageView.setImageBitmap(MyActivity.getRoundedCornerBitmap(bitmap));  
+            // imageView.setImageBitmap(MyActivity.toRoundCorner(bitmap, 20));  
+        }  
+      
+        /** 
+         * 获取圆角位图的方法 
+         * @param bitmap 需要转化成圆角的位图 
+         * @param pixels 圆角的度数，数值越大，圆角越大 
+         * @return 处理后的圆角位图 
+         */  
+        public static Bitmap toRoundCorner(Bitmap bitmap, int pixels) {  
+            Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),  
+                    bitmap.getHeight(), Config.ARGB_8888);  
+            Canvas canvas = new Canvas(output);  
+            final int color = 0xff424242;  
+            final Paint paint = new Paint();  
+            final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());  
+            final RectF rectF = new RectF(rect);  
+            final float roundPx = pixels;  
+            paint.setAntiAlias(true);  
+            canvas.drawARGB(0, 0, 0, 0);  
+            paint.setColor(color);  
+            canvas.drawRoundRect(rectF, roundPx, roundPx, paint);  
+            paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));  
+            canvas.drawBitmap(bitmap, rect, rect, paint);  
+            return output;  
+        }  
+      
+    }  
