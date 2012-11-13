@@ -1,0 +1,32 @@
+﻿做到关于组播的问题时,明明手机发送电脑的java客户端能接收,但电脑发送的组播一直接收不了.
+而手机自己发送的组播自己能接收.......
+在网上找了很多资代码料,都说要Android为了省电把接收组播关了要手动打开
+代码如下:
+[java] view plaincopy
+
+    WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);  
+    MulticastLock multicastLock = wifiManager  
+            .createMulticastLock("multicast.test");  
+    multicastLock.acquire();  
+
+还要添加权限
+
+[java] view plaincopy
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission  android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+
+但是加了这个仍然接收不了数据.
+
+然后上网查了下组播的地址范围:
+224.0.0.0～224.0.0.255为预留的组播地址（永久组地址），地址224.0.0.0保留不做分配，其它地址供路由协议使用；
+224.0.1.0～224.0.1.255是公用组播地址，可以用于Internet；
+224.0.2.0～238.255.255.255为用户可用的组播地址（临时组地址），全网范围内有效
+239.0.0.0～239.255.255.255为本地管理组播地址，仅在特定的本地范围内有效。
+
+
+发现组播地址弄错了.......把地址改到239.0.0.0～239.255.255.255之间,终于能正常接收电脑java端发送的组播数据.
+哎...乱填地址害死人....鄙视
+
+在4.0中好像239.0.0.0～239.255.255.255 中较低部分地址也是不能正常工作。且android打不打开锁也没有关系。
